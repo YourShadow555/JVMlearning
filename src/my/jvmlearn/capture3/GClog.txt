@@ -1,0 +1,11 @@
+[GC (System.gc()) [PSYoungGen: 7411K->824K(37888K)] 7411K->832K(123904K), 0.0948439 secs] [Times: user=0.08 sys=0.00, real=0.11 secs] 
+[Full GC (System.gc()) [PSYoungGen: 824K->0K(37888K)] [ParOldGen: 8K->742K(86016K)] 832K->742K(123904K), [Metaspace: 3445K->3445K(1056768K)], 0.0562997 secs] [Times: user=0.05 sys=0.00, real=0.05 secs] 
+Heap
+ PSYoungGen      total 37888K, used 328K [0x00000000d6100000, 0x00000000d8b00000, 0x0000000100000000)
+  eden space 32768K, 1% used [0x00000000d6100000,0x00000000d6152030,0x00000000d8100000)
+  from space 5120K, 0% used [0x00000000d8100000,0x00000000d8100000,0x00000000d8600000)
+  to   space 5120K, 0% used [0x00000000d8600000,0x00000000d8600000,0x00000000d8b00000)
+ ParOldGen       total 86016K, used 742K [0x0000000082200000, 0x0000000087600000, 0x00000000d6100000)
+  object space 86016K, 0% used [0x0000000082200000,0x00000000822b9880,0x0000000087600000)
+ Metaspace       used 3452K, capacity 4496K, committed 4864K, reserved 1056768K
+  class space    used 376K, capacity 388K, committed 512K, reserved 1048576K
