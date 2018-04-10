@@ -79,7 +79,7 @@ Thread 0xff3fa568
   at java.util.ArrayList.ensureExplicitCapacity(I)V (ArrayList.java:239)
   at java.util.ArrayList.ensureCapacityInternal(I)V (ArrayList.java:231)
   at java.util.ArrayList.add(Ljava/lang/Object;)Z (ArrayList.java:462)
-  at my.jvmlearn.HeapOOM.main([Ljava/lang/String;)V (HeapOOM.java:16)
+  at my.jvmlearn.capture2.HeapOOM.main([Ljava/lang/String;)V (HeapOOM.java:16)
 
   locals:
     objectId=0xff501d10, line=1

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="activemq-all-5.15.3">
+    <CLASSES>
+      <root url="jar://D:/apache-activemq-5.15.3/activemq-all-5.15.3.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/cglib-2.2.2.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/asm-3.3.1.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/jedis-2.9.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

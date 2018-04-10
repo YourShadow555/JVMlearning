@@ -1,4 +1,4 @@
-package my.jvmlearn;
+package my.jvmlearn.capture2;
 
 /**
  * VM Args: -Xss128k

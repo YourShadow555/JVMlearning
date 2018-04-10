@@ -1,4 +1,4 @@
-package my.jvmlearn;
+package my.jvmlearn.capture2;
 
 /**
  * VM Args:-Xss2M(这时候不妨设置大些)
