@@ -6,4 +6,20 @@
     <select id="getUser" parameterType="string" resultType="user">
         select user_id,user_name,user_remark from test where user_id=#{id}
     </select>
+
+    <insert id="insertUser" parameterType="user">
+        insert into test value (#{userId},#{userName},#{userRemark})
+    </insert>
+
+    <delete id="deleteUser" parameterType="string">
+        delete from test where user_id=#{userId}
+    </delete>
+
+    <update id="updateUser" parameterType="user">
+        update test set user_name = #{userName},user_remark=#{userRemark} where user_id=#{userId};
+    </update>
+
+    <select id="findUsers" parameterType="string" resultType="user">
+        select user_id,user_name,user_remark from test where user_name like concat('%',#{userName},'%');
+    </select>
 </mapper>
