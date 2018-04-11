@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+    <properties resource="jdbc.properties"/>
     <settings>
         <setting name="mapUnderscoreToCamelCase" value="true"/>
     </settings>
     <typeAliases>
         <typeAlias type="my.lei.pojp.User" alias="user"/>
     </typeAliases>
+    <!--指定自定义typeHandler-->
+    <!--<typeHandlers>
+        <typeHandler handler="my.lei.utils.MyTypeHandler" javaType="String" jdbcType="VARCHAR"/>
+    </typeHandlers>-->
     <environments default="develoment">
         <environment id="develoment">
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
-                <property name="driver" value="com.mysql.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql://112.74.47.58:3306/test?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false"/>
-                <property name="username" value="root"/>
-                <property name="password" value="Lei1114!"/>
+                <property name="driver" value="${database.driver}"/>
+                <property name="url" value="${database.url}"/>
+                <property name="username" value="${database.username}"/>
+                <property name="password" value="${database.password}"/>
             </dataSource>
         </environment>
     </environments>

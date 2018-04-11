@@ -7,6 +7,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Properties;
 
 public class SQLSessionFactoryUtils {
     private final static Class<SQLSessionFactoryUtils> LOCK = SQLSessionFactoryUtils.class;
@@ -21,9 +22,21 @@ public class SQLSessionFactoryUtils {
             }
             String resource = "mybatis-config.xml";
             InputStream inputStream;
+            Properties properties = new Properties();
+            try {
+                InputStream in = Resources.getResourceAsStream("jdbc.properties");
+                properties.load(in);
+                String username = properties.getProperty("database.username");
+                String password = properties.getProperty("database.password");
+                //解密用户名和密码，并且在属性中重置
+                properties.put("database.username", DESUtils.getDecryptString(username));
+                properties.put("database.password", DESUtils.getDecryptString(password));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             try {
                 inputStream = Resources.getResourceAsStream(resource);
-                sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+                sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream,properties);
             } catch (IOException e) {
                 e.printStackTrace();
                 return null;
