@@ -12,6 +12,10 @@
     <!--<typeHandlers>
         <typeHandler handler="my.lei.utils.MyTypeHandler" javaType="String" jdbcType="VARCHAR"/>
     </typeHandlers>-->
+    <!--指定自动以ObjectFactory-->
+    <objectFactory type="my.lei.utils.MyObjectFactory" >
+        <property name="prop1" value="value1"/>
+    </objectFactory>
     <environments default="develoment">
         <environment id="develoment">
             <transactionManager type="JDBC"/>
